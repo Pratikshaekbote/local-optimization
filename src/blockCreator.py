@@ -258,7 +258,7 @@ def constantPropInstr(instr, table):
 
 def main():
     if(len(sys.argv) == 1):
-        fileName = 'test/test_examples/test.txt'
+        fileName = 'D:/SEM 6/CD LAB/local-optimization/src/test/test_examples/test.txt'
     elif(len(sys.argv) == 2):
         fileName = sys.argv[1]
     else:
@@ -275,6 +275,7 @@ def main():
         allIntr += optInstructions
     newBlocks = instanceBasicBlocks(allIntr)
 
+    print("Optimized Three-Address-Code:") 
     for i in range(len(newBlocks)):
         saveBlock = copy.deepcopy(newBlocks[i])
         while(True):
